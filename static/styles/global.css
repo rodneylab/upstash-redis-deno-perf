@@ -1,0 +1,96 @@
+:root {
+  --spacing-0: 0;
+  --spacing-px: 1px;
+  --spacing-2: 0.5rem;
+  --spacing-4: 1rem;
+  --spacing-8: 2rem;
+
+  --border-radius: var(--spacing-2);
+
+  --colour-dark: hsl(100deg 18% 13%); /* log cabin */
+  --colour-light: hsl(20deg 33% 95%); /* dawn pink */
+  --colour-brand: hsl(162deg 100% 46%); /* caribbean green */
+  --colour-theme: hsl(201deg 67% 44%); /* curious blue */
+  --colour-alt: hsl(15deg 9% 75%); /* silver rust */
+
+  --shadow-color: 14deg 4% 46%;
+  --shadow-elevation-medium: -1px 1px 1.4px hsl(var(--shadow-color) / 0.51),
+    -2.7px 2.7px 3.7px -1.2px hsl(var(--shadow-color) / 0.43),
+    -7.6px 7.6px 10.5px -2.3px hsl(var(--shadow-color) / 0.36),
+    -20px 20px 27.6px -3.5px hsl(var(--shadow-color) / 0.29);
+
+  --font-family-mono: Cousine;
+
+  --font-size-1: 1rem;
+  --font-size-6: 3.433rem;
+
+	--font-weight-bold: 700;
+
+	--line-height-normal: 1.5;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+  background-color: var(--colour-alt);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font: var(--font-size-1) / var(--line-height-normal) "Darker Grotesque";
+  color: var(--colour-text);
+  text-rendering: optimizelegibility;
+  background-color: var(--colour-theme-2-tint-70);
+  min-height: 100vh;
+}
+
+h1 {
+  font: 55.0622px / 46px "Darker Grotesque";
+  margin: var(--spacing-0);
+  padding: var(--spacing-4) var(--spacing-4);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--colour-dark);
+  color: var(--colour-brand);
+  border-radius: calc(var(--border-radius) - 1px)
+    calc(var(--border-radius) - 1px) var(--spacing-0) var(--spacing-0);
+}
+
+h1::before {
+  content: "";
+  margin-bottom: -0.2367em;
+  display: table;
+}
+
+h1::after {
+  content: "";
+  margin-top: -0.0357em;
+  display: table;
+}
+
+main {
+  background-color: var(--colour-light);
+  border: var(--spacing-px) solid var(--colour-dark);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+pre {
+  margin: var(--spacing-8) auto;
+  width: fit-content;
+  font-family: var(--font-family-mono);
+}
