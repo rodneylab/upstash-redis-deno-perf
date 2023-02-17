@@ -14,7 +14,7 @@ export async function timeEvent<EventReturnType>(
   const result = await eventFunction();
   performance.mark(finishName);
 
-  //record
+  // record
   performanceMeasures.push(
     performance.measure(description, startName, finishName),
   );

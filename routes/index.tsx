@@ -42,11 +42,11 @@ export default function Home(context: PageProps<Data>) {
 
   return (
     <Layout
-      description="Redis and the Performance API: measuring Upstash Redis performance gains with Web APIs to deploy the database optimally in your Deno app."
-      title="Upstash Redis Deno Perf"
+      description="Upstash for Redis and the Performance API: measuring performance gains with Web APIs to deploy the database optimally in your Deno app."
+      title="Upstash for Redis Deno Perf"
     >
       <main>
-        <h1>Upstash Redis Deno Perf</h1>
+        <h1>Upstash for Redis Deno Perf</h1>
         <pre>{JSON.stringify({ likes, views }, null, 2)}</pre>
       </main>
     </Layout>
